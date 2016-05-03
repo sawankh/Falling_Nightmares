@@ -1,0 +1,19 @@
+primal
+	dinasours
+
+medieval
+	swords
+	pikes
+	shields
+
+modern
+	tank
+	plane
+
+spooky
+	skeletons
+
+animals
+	fox
+
+player
