@@ -9,23 +9,29 @@ public class DeathByContact : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Die();
+        if (IsObstacle(other.gameObject))
+            Die();
     }
 
     void OnCollisionEnter(Collision other)
     {
-        GameObject o = other.collider.gameObject;
+        if (IsObstacle(other.collider.gameObject))
+            Die();
+    }
+
+    bool IsObstacle(GameObject o)
+    {
         int obstacleLayer = LayerMask.NameToLayer("Obstacle");
 
         while (o.layer != obstacleLayer)
         {
             if (o.transform.parent == null)
-                return;
+                return false;
 
             o = o.transform.parent.gameObject;
         }
 
-        Die();
+        return true;
     }
 
     void Die()
