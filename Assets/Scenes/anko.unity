@@ -1613,7 +1613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modules:
+  - {fileID: 153504, guid: d41d48a4c62dc274a9babdfa7c75adb7, type: 2}
   - {fileID: 123038, guid: a85f839a07fa9524fb762ef154efeab9, type: 2}
+  - {fileID: 138030, guid: e5aeeff9596f8f84e82a8ff4ce9bda7b, type: 2}
 --- !u!1 &457720993
 GameObject:
   m_ObjectHideFlags: 0
