@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class EndlessTunnel : MonoBehaviour {
 
+    public GameObject walls;
     public List<GameObject> modules;
     private GameObject lastModule;
 
@@ -18,11 +19,19 @@ public class EndlessTunnel : MonoBehaviour {
         AppendModule(module);
     }
 
-    void AppendModule(GameObject module)
+    void AppendModule(GameObject obstacle)
     {
-        GameObject m = Instantiate(module);
+        GameObject m = new GameObject("Module");
         m.transform.parent = this.gameObject.transform;
-        m.transform.position = lastModule.transform.position - new Vector3(0, 10, 0); //#! Change '10' to a correct value !#
+        m.transform.position = lastModule.transform.position - new Vector3(0, 8.25f, 0); //#! Change '10' to a correct value !#
+
+        GameObject w = Instantiate(walls);
+        w.transform.parent = m.transform;
+        w.transform.position = m.transform.position;
+
+        GameObject o = Instantiate(obstacle);
+        o.transform.parent = m.transform;
+        o.transform.position = m.transform.position;
 
         lastModule = m;
     }
