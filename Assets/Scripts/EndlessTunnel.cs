@@ -22,6 +22,7 @@ public class EndlessTunnel : MonoBehaviour {
     void AppendModule(GameObject obstacle)
     {
         GameObject m = new GameObject("Module");
+        m.tag = "TunnelModule";
         m.transform.parent = this.gameObject.transform;
         m.transform.position = lastModule.transform.position - new Vector3(0, 8.25f, 0); //#! Change '10' to a correct value !#
 
@@ -31,7 +32,7 @@ public class EndlessTunnel : MonoBehaviour {
 
         GameObject o = Instantiate(obstacle);
         o.transform.parent = m.transform;
-        o.transform.position = m.transform.position;
+        o.transform.position = o.transform.position + m.transform.position;
 
         lastModule = m;
     }
