@@ -46,7 +46,7 @@ GameObject:
   - 4: {fileID: 490244}
   m_Layer: 0
   m_Name: Layer
-  m_TagString: Untagged
+  m_TagString: TunnelModule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
