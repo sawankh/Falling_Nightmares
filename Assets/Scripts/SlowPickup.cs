@@ -13,7 +13,7 @@ public class SlowPickup : MonoBehaviour {
             return;
 
         busy = true;
-        Destroy(transform.parent.gameObject); //#! gradual
+        Destroy(gameObject); //#! gradual
         Time.timeScale = Mathf.Max(1, Time.timeScale - slowAmount);
     }
 
