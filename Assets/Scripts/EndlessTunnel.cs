@@ -13,15 +13,23 @@ public class EndlessTunnel : MonoBehaviour {
     }
 
 
-    void AppendModule()
+    public void AppendModule()
     {
         GameObject module = modules[Random.Range(0, modules.Count)];
+
         AppendModule(module);
     }
 
-    void AppendModule(GameObject obstacle)
+    public void AppendModule(GameObject obstacle)
     {
-        GameObject m = new GameObject("Module");
+        CompositeTunnelModule composite = obstacle.GetComponent<CompositeTunnelModule>();
+        if (composite != null)
+        {
+            composite.AttachTo(this);
+            return;
+        }
+
+            GameObject m = new GameObject("Module");
         m.tag = "TunnelModule";
         m.transform.parent = this.gameObject.transform;
         m.transform.position = lastModule.transform.position - new Vector3(0, 8.25f, 0); //#! Change '10' to a correct value !#
