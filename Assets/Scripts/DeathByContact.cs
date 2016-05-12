@@ -7,12 +7,6 @@ public class DeathByContact : MonoBehaviour {
 
     private bool dead = false;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (IsObstacle(other.gameObject))
-            Die();
-    }
-
     void OnCollisionEnter(Collision other)
     {
         if (IsObstacle(other.collider.gameObject))
