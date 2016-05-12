@@ -213,7 +213,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400130, guid: f9c6a3ad36f11804a9da57c9889aa6fd, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 87109151}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -221,6 +221,7 @@ Transform:
   - {fileID: 379799130}
   - {fileID: 1125980395}
   - {fileID: 891650608}
+  - {fileID: 119255583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!136 &87109154
@@ -296,6 +297,59 @@ Transform:
   - {fileID: 1785199802}
   m_Father: {fileID: 1112563876}
   m_RootOrder: 0
+--- !u!1 &119255582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 119255583}
+  - 65: {fileID: 119255585}
+  - 114: {fileID: 119255584}
+  m_Layer: 0
+  m_Name: DeathByContact - Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &119255583
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119255582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 87109153}
+  m_RootOrder: 4
+--- !u!114 &119255584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119255582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d709bae16fdd747aa7b3ee9e8e591f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathScreen: {fileID: 1995177647}
+--- !u!65 &119255585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119255582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0, z: 0.25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &178116284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,12 +1363,12 @@ GameObject:
   - 65: {fileID: 891650610}
   - 114: {fileID: 891650609}
   m_Layer: 0
-  m_Name: DeathByContact
+  m_Name: DeathByContact - Belly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &891650608
 Transform:
   m_ObjectHideFlags: 0
@@ -3567,8 +3621,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2063533088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -3}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 3, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1937512260}
